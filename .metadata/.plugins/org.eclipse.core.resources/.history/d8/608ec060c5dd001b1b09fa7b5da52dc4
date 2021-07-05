@@ -1,0 +1,34 @@
+package PrimeNumJava;
+
+import java.util.Scanner;
+
+public class IsPrime 
+{
+	public static void main(String[] args) 
+	{
+		// TODO Auto-generated method stub
+
+		int x1,x2;
+		
+		Scanner sc = new Scanner(System.in);
+		System.out.println("\n Please Enter any Range: ");
+		x1 = sc.nextInt();
+		x2 = sc.nextInt();
+		
+
+		for (int i = x1; i < x2; i++) 
+		{
+			int factors = 0;
+			for (int j = 1; j <= i; j++) 
+			{
+				if (i % j == 0) 
+				{
+					factors++;
+				}
+			}
+			if (factors == 2)
+				System.out.println(i);
+		}
+	}
+
+}
